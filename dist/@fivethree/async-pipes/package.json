@@ -1,0 +1,50 @@
+{
+  "name": "@fivethree/async-pipes",
+  "version": "0.0.1",
+  "description": "Async Pipes",
+  "keywords": [
+    "angular",
+    "ionic",
+    "async",
+    "rxjs",
+    "pipes"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=7.0.0",
+    "@angular/core": ">=7.0.0",
+    "rxjs": ">=6.4.0"
+  },
+  "author": "Fivethree Team",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Gary Großgarten",
+      "email": "gary@fivethree.io"
+    },
+    {
+      "name": "Marc Stammerjohann",
+      "email": "marc@fivethree.io"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fivethree-team/async-pipes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fivethree-team/async-pipes/issues"
+  },
+  "homepage": "https://github.com/fivethree-team/async-pipes#readme",
+  "main": "bundles/fivethree-async-pipes.umd.js",
+  "module": "fesm5/fivethree-async-pipes.js",
+  "es2015": "fesm2015/fivethree-async-pipes.js",
+  "esm5": "esm5/fivethree-async-pipes.js",
+  "esm2015": "esm2015/fivethree-async-pipes.js",
+  "fesm5": "fesm5/fivethree-async-pipes.js",
+  "fesm2015": "fesm2015/fivethree-async-pipes.js",
+  "typings": "fivethree-async-pipes.d.ts",
+  "metadata": "fivethree-async-pipes.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

@@ -1,15 +1,37 @@
 {
-  "name": "rxjs",
+  "name": "@fivethree/async-pipes",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Fivethree Team",
+  "homepage": "https://fivethree.io/",
+  "description": "Fivethree Web Components",
+  "contributors": [
+    {
+      "name": "Gary Großgarten",
+      "email": "gary@fivethree.io"
+    },
+    {
+      "name": "Marc Stammerjohann",
+      "email": "marc@fivethree.io"
+    }
+  ],
+  "keywords": [
+    "angular",
+    "ionic",
+    "async",
+    "rxjs",
+    "pipes"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format:lib": "prettier --write \"projects/**/*{.ts,.scss}\"",
+    "format:docs": "prettier --write \"src/**/*{.ts,.scss}\"",
+    "rocket": "npm run build:prod && cp README.md dist/@fivethree/async-pipes && npm run publish",
+    "version": "conventional-changelog -p angular -i ./CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +54,7 @@
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
     "@angular-devkit/build-angular": "~0.13.8",
+    "@angular-devkit/build-ng-packagr": "~0.13.0",
     "@angular-devkit/core": "~7.3.8",
     "@angular-devkit/schematics": "~7.3.8",
     "@angular/cli": "~7.3.8",
@@ -39,9 +62,9 @@
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
     "@ionic/angular-toolkit": "~1.5.1",
-    "@types/node": "~12.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~12.0.0",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -50,10 +73,13 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^4.2.0",
+    "prettier": "~1.18.2",
     "protractor": "~5.4.0",
     "ts-node": "~8.3.0",
+    "tsickle": ">=0.34.0",
+    "tslib": "^1.9.0",
     "tslint": "~5.17.0",
     "typescript": "~3.1.6"
-  },
-  "description": "An Ionic project"
+  }
 }
