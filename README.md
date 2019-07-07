@@ -3,9 +3,9 @@
 RxJS async pipes for Angular
 
 ## 📦 Installation
-To get started, install the package from npm. The latest version supports Ionic 4 and Angular 7.
+To get started, install the package from npm. The latest version supports Angular 7 and above.
 
-You can use either npm or yarn to install `@fivethree/core` from npm.
+You can use either npm or yarn to install `@fivethree/async-pipes` from npm.
 
 ```console
 npm install @fivethree/async-pipes --save
@@ -34,7 +34,7 @@ export class HomePageModule {}
 ### EmptyPipe -> `empty`
 ```html
 <div *ngIf="numbers$ | empty | async">
-    Empty State - Source Observable emitted an empty value
+    Empty State - Source Observable emitted an empty array
 </div>
 ```
 
