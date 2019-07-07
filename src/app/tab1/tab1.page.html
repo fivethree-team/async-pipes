@@ -9,7 +9,7 @@
 <ion-content>
   <ion-grid fixed>
     <ion-row>
-      <ion-col size="12">
+      <ion-col size="12" size-md="6">
         <!-- <h2>Templates</h2>
         <div *ngIf="numbers$ | async as number; else pendingOrError">
           <div *ngIf="!number.length">
@@ -21,7 +21,12 @@
           Pending or Error
         </ng-template> -->
 
-        <h2>Pending and Value</h2>
+        <ion-button (click)="onClick()">
+          Click me
+        </ion-button>
+
+        <h1>Array</h1>
+        <h2>Pending => Value</h2>
         <div *ngIf="numbers$ | pending | async">
           Pending
         </div>
@@ -29,18 +34,43 @@
           <p *ngFor="let number of numbers">{{number}}</p>
         </div>
 
-        <h2>Pending and Empty</h2>
+        <h2>Pending => Empty</h2>
         <div *ngIf="numbersEmpty$ | pending | async">
           Pending
         </div>
         <div *ngIf="numbersEmpty$ | empty | async">
           Empty Array
         </div>
-        <h2>Pending and Error</h2>
+        <h2>Pending => Error</h2>
         <div *ngIf="numbersError$ | pending | async">
           Pending
         </div>
-        <div *ngIf="numbersError$ |error |  async as error">
+        <div *ngIf="numbersError$ | error | async as error">
+          Has error: {{error}}
+        </div>
+      </ion-col>
+      <ion-col size="12" size-md="6">
+        <h1>String</h1>
+        <h2>Pending => Value</h2>
+        <div *ngIf="helloWorld$ | pending | async">
+          Pending
+        </div>
+        <div *ngIf="helloWorld$ | async as helloWorld">
+          <p>{{helloWorld}}</p>
+        </div>
+
+        <h2>Pending => Empty</h2>
+        <div *ngIf="helloWorldEmpty$ | pending | async">
+          Pending
+        </div>
+        <div *ngIf="helloWorldEmpty$ | empty | async">
+          Empty String
+        </div>
+        <h2>Pending => Error</h2>
+        <div *ngIf="helloWorldError$ | pending | async">
+          Pending
+        </div>
+        <div *ngIf="helloWorldError$ | error | async as error">
           Has error: {{error}}
         </div>
       </ion-col>

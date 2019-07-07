@@ -12,9 +12,17 @@ export class Tab1Page {
   numbersEmpty$: Observable<number[]>;
   numbersError$: Observable<number[]>;
 
+  helloWorld$: Observable<string>;
+  helloWorldEmpty$: Observable<string>;
+  helloWorldError$: Observable<string>;
+
   constructor() {}
 
   ionViewWillEnter() {
+    this.setupObservable();
+  }
+
+  private setupObservable() {
     this.numbers$ = of([1, 2, 3, 4, 5]).pipe(delay(5000));
 
     this.numbersEmpty$ = of([]).pipe(delay(5000));
@@ -23,5 +31,18 @@ export class Tab1Page {
       delay(5000),
       flatMap(() => throwError('ups'))
     );
+
+    this.helloWorld$ = of('Hello World!').pipe(delay(5000));
+
+    this.helloWorldEmpty$ = of(null).pipe(delay(5000));
+
+    this.helloWorldError$ = of('Hello World!').pipe(
+      delay(5000),
+      flatMap(() => throwError('ups'))
+    );
+  }
+
+  onClick() {
+    this.setupObservable();
   }
 }
