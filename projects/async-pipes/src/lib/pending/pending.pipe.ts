@@ -7,7 +7,7 @@ import { map, startWith, catchError } from 'rxjs/operators';
   pure: true
 })
 export class PendingPipe<T> implements PipeTransform {
-  transform(stream: Observable<T>): Observable<boolean> {
+  transform(stream: Observable<T[]>): Observable<boolean> {
     if (!stream) {
       return;
     }
