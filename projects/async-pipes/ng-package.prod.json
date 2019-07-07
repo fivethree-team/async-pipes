@@ -4,6 +4,6 @@
   "deleteDestPath": true,
   "lib": {
     "flatModuleFile": "fivethree-async-pipes",
-    "entryFile": "src/public_api.ts"
+    "entryFile": "src/public-api.ts"
   }
 }
