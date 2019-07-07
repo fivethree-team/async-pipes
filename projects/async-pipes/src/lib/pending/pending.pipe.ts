@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { map, startWith, catchError } from 'rxjs/operators';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { first } from 'rxjs/operators';
 
 @Pipe({
   name: 'pending',
@@ -11,10 +11,11 @@ export class PendingPipe<T> implements PipeTransform {
     if (!stream) {
       return;
     }
-    return stream.pipe(
-      startWith(false),
-      map(value => !value),
-      catchError(() => of(false))
-    );
+
+    const bla = new BehaviorSubject(true);
+    stream
+      .pipe(first())
+      .subscribe(() => bla.next(false), () => bla.next(false));
+    return bla;
   }
 }
