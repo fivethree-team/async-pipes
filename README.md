@@ -1,5 +1,7 @@
 # Async Pipes
 
+[![npm version](https://badge.fury.io/js/%40fivethree%2Fasync-pipes.svg)](https://www.npmjs.com/@fivethree/async-pipes)
+
 RxJS async pipes for Angular
 
 ## 📦 Installation
