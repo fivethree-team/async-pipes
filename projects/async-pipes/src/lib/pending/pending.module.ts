@@ -8,4 +8,4 @@ import { CommonModule } from '@angular/common';
   exports: [PendingPipe],
   providers: []
 })
-export class PendingModule {}
+export class PendingPipeModule {}

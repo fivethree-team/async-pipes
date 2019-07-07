@@ -7,4 +7,4 @@ import { EmptyPipe } from './empty.pipe';
   imports: [CommonModule],
   exports: [EmptyPipe]
 })
-export class EmptyModule {}
+export class EmptyPipeModule {}

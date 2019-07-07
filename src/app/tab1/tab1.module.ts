@@ -5,9 +5,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import {
-  PendingModule,
-  EmptyModule,
-  ErrorModule
+  PendingPipeModule,
+  EmptyPipeModule,
+  ErrorPipeModule
 } from '@fivethree/async-pipes';
 
 @NgModule({
@@ -16,9 +16,9 @@ import {
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }]),
-    PendingModule,
-    EmptyModule,
-    ErrorModule
+    PendingPipeModule,
+    EmptyPipeModule,
+    ErrorPipeModule
   ],
   declarations: [Tab1Page]
 })

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable, of, timer, throwError } from 'rxjs';
-import { timeInterval, delay, flatMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { delay, flatMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tab1',
@@ -8,12 +8,12 @@ import { timeInterval, delay, flatMap } from 'rxjs/operators';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  numbers$: Observable<number[]>;
+  numbers$: Observable<string>;
 
   constructor() {}
 
   ionViewWillEnter() {
-    this.numbers$ = of([1, 2, 3, 5]).pipe(
+    this.numbers$ = of('').pipe(
       delay(5000)
       // flatMap(() => throwError('ups'))
     );

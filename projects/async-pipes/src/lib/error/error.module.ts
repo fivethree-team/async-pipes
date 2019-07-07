@@ -8,4 +8,4 @@ import { ErrorPipe } from './error.pipe';
   exports: [ErrorPipe],
   providers: []
 })
-export class ErrorModule {}
+export class ErrorPipeModule {}
