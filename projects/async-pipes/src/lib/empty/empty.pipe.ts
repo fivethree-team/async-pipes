@@ -12,7 +12,7 @@ export class EmptyPipe<T> implements PipeTransform {
       return;
     }
     return stream.pipe(
-      map((values: T[]) => values.length),
+      map(values => (values || '').length),
       map((value: boolean | number) => !value)
     );
   }
