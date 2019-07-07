@@ -1,6 +1,6 @@
 {
   "name": "@fivethree/async-pipes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Fivethree Team",
   "homepage": "https://fivethree.io/",
   "description": "Fivethree Web Components",
@@ -31,6 +31,7 @@
     "e2e": "ng e2e",
     "format:lib": "prettier --write \"projects/**/*{.ts,.scss}\"",
     "format:docs": "prettier --write \"src/**/*{.ts,.scss}\"",
+    "publish": "npm publish dist/@fivethree/async-pipes",
     "rocket": "npm run build:prod && cp README.md dist/@fivethree/async-pipes && npm run publish",
     "version": "conventional-changelog -p angular -i ./CHANGELOG.md -s && git add CHANGELOG.md"
   },
